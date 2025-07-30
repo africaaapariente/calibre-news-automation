@@ -1,0 +1,12 @@
+git clone https://github.com/tu_usuario/calibre-news-automation.git
+cd calibre-news-automation
+
+# Crea la estructura y archivos que te di antes
+mkdir recipes
+# Copia o crea los 3 archivos: elmundo.recipe, expansion_spanish.recipe, wsj_news.recipe
+
+# Crea y pega el contenido de descargar_y_enviar.py, README.md, requirements.txt
+
+git add .
+git commit -m "Primera versión automatización Calibre News"
+git push origin main
