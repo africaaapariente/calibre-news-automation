@@ -1,12 +1,13 @@
-git clone https://github.com/tu_usuario/calibre-news-automation.git
-cd calibre-news-automation
+__license__ = 'GPL v3'
+__author__ = 'Kovid Goyal'
+__title__ = 'El Mundo'
+__url__ = 'https://www.elmundo.es/'
 
-# Crea la estructura y archivos que te di antes
-mkdir recipes
-# Copia o crea los 3 archivos: elmundo.recipe, expansion_spanish.recipe, wsj_news.recipe
+from calibre.web.feeds.news import BasicNewsRecipe
 
-# Crea y pega el contenido de descargar_y_enviar.py, README.md, requirements.txt
-
-git add .
-git commit -m "Primera versión automatización Calibre News"
-git push origin main
+class ElMundo(BasicNewsRecipe):
+    title = 'El Mundo'
+    __author__ = 'Kovid Goyal'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    feeds = [(u'Portada', u'https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml')]
